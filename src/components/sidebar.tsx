@@ -16,13 +16,16 @@ import {
   PlusIcon,
   StickyNoteIcon,
 } from "lucide-react";
+import { SidebarClient } from "./sidebar-client";
+import { PaneContainer, PaneContent, PaneHeader } from "./pane";
+import { SidebarToggle } from "./sidebar-toggle";
 
 export default function Sidebar() {
   return (
-    <div>
-      <div className="max-h-screen overflow-y-auto">
+    <SidebarClient>
+      <PaneContainer className="max-h-screen overflow-y-auto">
         {/* Brand */}
-        <div className="justify-between">
+        <PaneHeader className="justify-between">
           <Link
             className="inline-flex items-center space-x-3 px-1 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring xl:p-0"
             href="/"
@@ -30,8 +33,10 @@ export default function Sidebar() {
             <BookmarkIcon size={20} />
             <span>Next Daily</span>
           </Link>
-        </div>
-      </div>
-    </div>
+          <SidebarToggle />
+        </PaneHeader>
+        <PaneContent></PaneContent>
+      </PaneContainer>
+    </SidebarClient>
   );
 }

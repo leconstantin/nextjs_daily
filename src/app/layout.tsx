@@ -1,12 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Geist } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Providers } from "@/components/providers";
 import Sidebar from "@/components/sidebar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -32,11 +32,11 @@ interface Props {
 
 export default function RootLayout({ children }: Props) {
   return (
-    <html lang="en">
+    <html className="dark" style={{ colorScheme: "dark" }} lang="en">
       <body
         className={cn(
           "relative flex min-h-screen w-full bg-background font-sans text-foreground antialiased",
-          geistSans.variable
+          inter.variable
         )}
       >
         <Providers>
