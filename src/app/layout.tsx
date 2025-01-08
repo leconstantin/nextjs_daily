@@ -2,8 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { Sidebar } from "lucide-react";
 import { Providers } from "@/components/providers";
+import Sidebar from "@/components/sidebar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

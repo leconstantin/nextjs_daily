@@ -1,11 +1,11 @@
 "use client";
 
-// import SidebarProvider from "./sidebar-provider";
+import SidebarProvider from "./sidebar-provider";
 
 interface Props {
   children: React.ReactNode;
 }
 
 export function Providers({ children }: Props) {
-  return <>{children}</>;
+  return <SidebarProvider>{children}</SidebarProvider>;
 }
