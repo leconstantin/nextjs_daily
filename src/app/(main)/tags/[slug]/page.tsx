@@ -5,9 +5,9 @@ import { EmptyPage } from "@/components/empty-page";
 import { toCapitalize } from "@/lib/utils";
 
 interface Props {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
