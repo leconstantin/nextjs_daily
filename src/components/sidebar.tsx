@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import {
@@ -7,13 +6,11 @@ import {
   CalendarIcon,
   ExternalLinkIcon,
   LayoutTemplateIcon,
-  LogOutIcon,
   MegaphoneIcon,
   MonitorSmartphoneIcon,
   Package2Icon,
   PanelTopIcon,
   PinIcon,
-  PlusIcon,
   StickyNoteIcon,
 } from "lucide-react";
 import { SidebarClient } from "./sidebar-client";

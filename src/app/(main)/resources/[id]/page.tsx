@@ -3,12 +3,7 @@
 import Link from "next/link";
 // import { notFound } from 'next/navigation'
 
-import {
-  ArrowLeftIcon,
-  BookmarkIcon,
-  ExternalLinkIcon,
-  ShareIcon,
-} from "lucide-react";
+import { ArrowLeftIcon, BookmarkIcon, ShareIcon } from "lucide-react";
 
 import { PaneContainer, PaneContent, PaneHeader } from "@/components/pane";
 // import { badgeVariants } from '@/components/ui/badge'
@@ -18,14 +13,14 @@ import { Button } from "@/components/ui/button";
 
 // import { getResourceById } from '@/services/queries/resources'
 
-interface Props {
-  params: {
-    id: string;
-  };
-  searchParams: {
-    tag: string;
-  };
-}
+// interface Props {
+//   params: {
+//     id: string;
+//   };
+//   searchParams: {
+//     tag: string;
+//   };
+// }
 
 // export async function generateMetadata({ params }: Props): Promise<Metadata> {
 //   const resource = await getResourceById(params.id)
@@ -34,7 +29,7 @@ interface Props {
 //   }
 // }
 
-export default async function Page({ params, searchParams }: Props) {
+export default async function Page() {
   // const resource = await getResourceById(params.id)
 
   // if (!resource) {
