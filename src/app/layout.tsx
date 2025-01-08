@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Providers } from "@/components/providers";
 import Sidebar from "@/components/sidebar";
+import { TailwindIndicator } from "@/components/tailwind-indicator";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -43,6 +44,7 @@ export default function RootLayout({ children }: Props) {
           <Sidebar />
           <main className="flex-1">{children}</main>
         </Providers>
+        <TailwindIndicator />
         {/* <Toaster /> */}
       </body>
     </html>
