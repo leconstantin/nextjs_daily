@@ -7,12 +7,15 @@ import { SidebarToggle } from "@/components/sidebar-toggle";
 
 import { cn } from "@/lib/utils";
 
+import { useTagParams } from "@/hooks/use-tag-params";
+
 interface Props {
   children: React.ReactNode;
 }
 
 export default function Layout({ children }: Props) {
   const layoutSegment = useSelectedLayoutSegment();
+  const tagParam = useTagParams();
 
   return (
     <aside
@@ -24,7 +27,7 @@ export default function Layout({ children }: Props) {
       <PaneContainer>
         <PaneHeader>
           <SidebarToggle />
-          <h1 className="capitalize">Feed</h1>
+          <h1 className="capitalize">{tagParam || "Feed"}</h1>
         </PaneHeader>
         <PaneContent>{children}</PaneContent>
       </PaneContainer>
