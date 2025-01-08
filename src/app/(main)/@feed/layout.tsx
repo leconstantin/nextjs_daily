@@ -21,7 +21,6 @@ export default function Layout({ children }: Props) {
         layoutSegment === "resources" && "hidden"
       )}
     >
-      cccccccccccc
       <PaneContainer>
         <PaneHeader>
           <SidebarToggle />
